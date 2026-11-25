@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>郭慧冉 · 作品集</title>
+<meta name="description" content="郭慧冉 · 剪辑师 / 短视频后期 —— 视频作品与荣誉">
+<meta property="og:title" content="郭慧冉 · 作品集">
+<meta property="og:description" content="郭慧冉 · 剪辑师 / 短视频后期 —— 视频作品与荣誉">
+<meta property="og:image" content="assets/img/works/w1.jpg">
+<meta property="og:type" content="website">
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'><rect width='32' height='32' rx='6' fill='%23231f1c'/><text x='16' y='22' font-size='16' text-anchor='middle' fill='%23faf7f2' font-family='serif'>郭</text></svg>">
+<link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+
+<!-- 顶部导航 -->
+<header class="nav" id="nav">
+  <a class="nav__brand" href="#top"><span class="nav__name">郭慧冉</span><span>作品集</span></a>
+  <nav class="nav__links">
+    <a href="#works">作品</a>
+    <a href="#awards">荣誉</a>
+    <a href="#about">关于</a>
+    <a href="#contact">联系</a>
+    <a class="nav__resume" id="navResume" href="#" hidden>简历</a>
+  </nav>
+</header>
+
+<!-- 首屏 -->
+<section class="hero" id="top">
+  <div class="hero__text">
+    <p class="hero__eyebrow" id="heroTitle">剪辑师 / 短视频后期</p>
+    <h1 class="hero__name" id="heroName">郭慧冉</h1>
+    <p class="hero__tagline" id="heroTagline">细心，从每一个小细节开始。</p>
+    <p class="hero__intro" id="heroIntro"></p>
+    <div class="hero__actions">
+      <a class="btn btn--solid" href="#works">看作品</a>
+      <a class="btn btn--ghost" href="#contact">联系我</a>
+      <a class="btn btn--text" id="heroResume" href="#" hidden>下载简历 ↓</a>
+    </div>
+  </div>
+  <div class="hero__portrait">
+    <img id="portrait" src="assets/img/portrait.jpg" alt="肖像">
+
+  </div>
+</section>
+
+<!-- 数字成绩 -->
+<section class="stats" id="stats">
+  <ul class="stats__list" id="statsList"></ul>
+</section>
+
+<!-- 作品 -->
+<section class="section" id="works">
+  <div class="section__head reveal">
+    <span class="section__index">01</span>
+    <h2 class="section__title">作品</h2>
+    <p class="section__desc">15 支成片，按类型分。点开可以直接播放。</p>
+  </div>
+  <div class="filters reveal" id="filters"></div>
+  <div class="grid" id="grid"></div>
+</section>
+
+<!-- 合作过的单位 -->
+<section class="clients" id="clients" hidden>
+  <div class="clients__inner reveal">
+    <p class="clients__label">合作过的单位</p>
+    <ul class="clients__list" id="clientsList"></ul>
+  </div>
+</section>
+
+<!-- 荣誉 -->
+<section class="section section--tint" id="awards">
+  <div class="section__head reveal">
+    <span class="section__index">02</span>
+    <h2 class="section__title">荣誉</h2>
+    <p class="section__desc">获奖与入选记录，奖状扫描可点开查看。</p>
+  </div>
+  <div class="awards-layout">
+    <ol class="timeline reveal" id="timeline"></ol>
+    <div class="awards-side reveal">
+      <h3 class="awards-side__title">奖状与证书</h3>
+      <div class="certs" id="certs"></div>
+      <p class="awards-side__hint" id="certHint">放上扫描件后会显示在这里</p>
+    </div>
+  </div>
+</section>
+
+<!-- 评价 -->
+<section class="section section--quote" id="quotes" hidden>
+  <p class="quotes__label">他们说</p>
+  <div class="quotes reveal" id="quoteList"></div>
+</section>
+
+<!-- 关于 -->
+<section class="section" id="about">
+  <div class="section__head reveal">
+    <span class="section__index">03</span>
+    <h2 class="section__title">关于</h2>
+  </div>
+  <div class="about">
+    <div class="about__col reveal">
+      <p id="aboutText"></p>
+      <h3>技能</h3>
+      <ul class="tags" id="skillList"></ul>
+      <h3>证书</h3>
+      <ul class="cert-list" id="certList"></ul>
+    </div>
+    <div class="about__col reveal">
+      <h3>经历</h3>
+      <ul class="exp" id="expList"></ul>
+      <h3>教育</h3>
+      <ul class="exp" id="eduList"></ul>
+    </div>
+  </div>
+</section>
+
+<!-- 联系 -->
+<footer class="footer" id="contact">
+  <div class="footer__inner reveal">
+    <h2 class="footer__title">一起做点东西</h2>
+    <p class="footer__desc">有合作或项目，欢迎随时联系。</p>
+    <ul class="footer__contact" id="contactList"></ul>
+  </div>
+  <p class="footer__copy" id="copyLine"></p>
+</footer>
+
+<!-- 灯箱 -->
+<div class="lightbox" id="lightbox" hidden>
+  <button class="lightbox__close" id="lbClose" aria-label="关闭">×</button>
+  <figure class="lightbox__figure">
+    <img id="lbImg" alt="">
+    <figcaption id="lbCap"></figcaption>
+  </figure>
+</div>
+
+<script src="assets/data/content.js"></script>
+<script src="assets/js/main.js"></script>
+</body>
+</html>
