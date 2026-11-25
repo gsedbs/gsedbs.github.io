@@ -1,4 +1,10 @@
 _preview/
 __pycache__/
 *.zip
-.thumbs/
+.netlify_token
+.netlify_site_id
+_publish.zip
+admin.html
+server.py
+publish.py
+*.cmd
