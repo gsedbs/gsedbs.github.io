@@ -164,3 +164,18 @@ ffmpeg -ss 3 -i 输出.mp4 -frames:v 1 -q:v 4 封面.jpg
 | **网站后台（改内容）** | 打开内容后台，改完点保存 |
 
 > 之前那个「打开郭慧冉作品集.cmd」报 `??????` 找不到文件，是因为 cmd 脚本存成了纯英文编码，中文路径变成了问号。现在改用 Windows 快捷方式（.lnk），脚本内的文件名也全部换成英文，不会再出现这个问题。
+
+## 十二、线上地址与发布（GitHub Pages）
+
+- **线上地址**：https://gsedbs.github.io/
+- 仓库：https://github.com/gsedbs/gsedbs.github.io （公开仓库，免费、永久、不要钱）
+- 更新流程：后台改内容 → 保存 → 双击 **`发布到线上.cmd`** → 等 1 分钟左右线上就更新
+
+发布脚本 `publish.py` 会：提交改动 → 推送到 GitHub → 轮询 Pages 构建状态。
+
+`github_token` 存在网站目录的 `.github_token` 文件里（已被 git 忽略，不会上传）。如果担心泄露，去
+`https://github.com/settings/tokens` 把旧令牌删掉再生成新的，替换这个文件即可。
+
+> 试过的其他平台（留作记录）：
+> - **Netlify**：能部署，但 `netlify.app` 在国内被阻断（手机报 ERR_CONNECTION_CLOSED）
+> - **腾讯云 EdgeOne Pages**：国内速度快，但免费版默认域名**只有 3 小时预览**，长期必须绑定自定义域名（要买域名 + 备案）

@@ -60,9 +60,15 @@
   function renderWorks() {
     const grid = $("#grid");
     const filters = $("#filters");
-    const cats = site.categories && site.categories.length
-      ? site.categories
-      : ["全部"].concat([...new Set(site.works.map((w) => w.category))]);
+    // 分类 = 手动配置的分类 + 作品里实际出现的分类（自动补齐）
+    const seen = new Set();
+    const cats = ["全部"];
+    (site.categories || []).forEach((c) => {
+      if (c !== "全部" && !seen.has(c)) { seen.add(c); cats.push(c); }
+    });
+    site.works.forEach((w) => {
+      if (w.category && !seen.has(w.category)) { seen.add(w.category); cats.push(w.category); }
+    });
 
     cats.forEach((cat, i) => {
       const btn = document.createElement("button");
