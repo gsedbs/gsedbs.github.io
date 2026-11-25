@@ -1,9 +1,10 @@
 _preview/
 __pycache__/
 *.zip
+_publish.zip
 .netlify_token
 .netlify_site_id
-_publish.zip
+.github_token
 admin.html
 server.py
 publish.py
